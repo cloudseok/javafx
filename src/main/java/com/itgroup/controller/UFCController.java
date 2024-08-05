@@ -78,7 +78,7 @@ public class UFCController implements Initializable {
         this.hostServices = hostServices;
     }
     @FXML
-    public void onImageClick(javafx.scene.input.MouseEvent event) {  // 이미지별 링크 참조
+    public void onImageClick(javafx.scene.input.MouseEvent event) {  // 이미지별 링크 참조 asdf
         String url = "";
         ImageView clickedImageView = (ImageView) event.getSource();
 
