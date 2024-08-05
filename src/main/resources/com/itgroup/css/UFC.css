@@ -1,0 +1,28 @@
+Label{
+    -fx-font-size:16px;
+}
+/* #은 fxml 파일 내의 id 속성을 의미합니다.  */
+#labelId{
+    -fx-background-color:black;
+    -fx-text-fill:yellow;
+}
+.labelClass{
+    -fx-background-color:blue;
+    -fx-text-fill:white;
+}
+TextField:focused{ /* 포커스를 받으면 */
+    -fx-border-color:skyblue;
+    -fx-background-color:yellow;
+}
+PasswordField:focused{
+    -fx-border-color:red;
+    -fx-background-color:green;
+}
+Button:hover{ /* 영역 안으로 들어 오면 */
+    -fx-border-color:skyblue;
+    -fx-background-color:yellow;
+}
+Button:pressed{ /* 눌려지면 */
+    -fx-border-color:skyblue;
+    -fx-background-color:red;
+}

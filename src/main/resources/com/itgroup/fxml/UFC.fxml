@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1102.0" stylesheets="@../css/UFC.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.controller.UFCController">
+    <top>
+        <AnchorPane prefHeight="127.0" prefWidth="694.0">
+            <Label layoutX="25.0" layoutY="15.0" text="PLAYERS" textFill="#fff6f6"/>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="40.0" mnemonicParsing="false"
+                    onAction="#onInsert" prefHeight="27.0" prefWidth="100.0" text="선수 등록" textAlignment="CENTER"/>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="40.0" mnemonicParsing="false"
+                    onAction="#onUpdate" prefHeight="27.0" prefWidth="100.0" text="수정"/>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutX="22.0" layoutY="80.0" mnemonicParsing="false"
+                    onAction="#onDelete" prefHeight="27.0" prefWidth="100.0" text="삭제"/>
+            <Label layoutX="30.0" layoutY="120.0" text="체급별로 보기 : " textFill="#fff6f6">
+                <font>
+                    <Font size="11.0"/>
+                </font>
+            </Label>
+            <ComboBox fx:id="fieldSearch" layoutX="136.0" layoutY="115.0" onAction="#choiceSelect" prefHeight="22.0"
+                      prefWidth="107.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="전체 보기"/>
+                        <String fx:value="플라이급"/>
+                        <String fx:value="밴텀급"/>
+                        <String fx:value="페더급"/>
+                        <String fx:value="라이트급"/>
+                        <String fx:value="웰터급"/>
+                        <String fx:value="미들급"/>
+                        <String fx:value="라이트 헤비급"/>
+                        <String fx:value="헤비급"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="80.0" mnemonicParsing="false"
+                    onAction="#onClosing" prefHeight="27.0" prefWidth="100.0" text="종료"/>
+            <AnchorPane layoutX="260.0" layoutY="1.0" prefHeight="158.0" prefWidth="440.0">
+                <ImageView fx:id="imageLink" fitHeight="150.0" fitWidth="200.0" layoutY="37.0"
+                           onMouseClicked="#onImageClick" opacity="0.9" preserveRatio="true">
+                    <Image url="@../images/UFCFightPass.png"/>
+                </ImageView>
+                <ImageView fx:id="imageLink1" fitHeight="50.0" fitWidth="100.0" layoutY="100.0"
+                           onMouseClicked="#onImageClick" opacity="0.9" preserveRatio="true">
+                    <Image url="@../images/UFCLogo.png"/>
+                </ImageView>
+                <ImageView fx:id="imageLink2" fitHeight="50.0" fitWidth="50.0" layoutX="94.0" layoutY="100.0"
+                           onMouseClicked="#onImageClick" opacity="0.9" preserveRatio="true">
+                    <Image url="@../images/UFCInstagram.png"/>
+                </ImageView>
+                <ImageView fx:id="imageLink3" fitHeight="50.0" fitWidth="50.0" layoutX="151.0" layoutY="100.0"
+                           onMouseClicked="#onImageClick" opacity="0.9" preserveRatio="true">
+                    <Image url="@../images/UFCX.png"/>
+                </ImageView>
+                <ImageView fx:id="imageLink4" fitHeight="66.0" fitWidth="207.0" layoutX="253.0" layoutY="35.0"
+                           onMouseClicked="#onImageClick" opacity="0.9" preserveRatio="true">
+                    <Image url="@../images/UFCStore.png"/>
+                </ImageView>
+                <ImageView fx:id="imageLink5" fitHeight="26.0" fitWidth="139.0" layoutX="253.0" layoutY="101.0"
+                           onMouseClicked="#onImageClick" opacity="0.9" preserveRatio="true">
+                    <Image url="@../images/UFCStoreSale.png"/>
+                </ImageView>
+                <Label layoutX="5.0" layoutY="15.0" text="LINK" textFill="#fff6f6"/>
+            </AnchorPane>
+        </AnchorPane>
+    </top>
+    <center>
+        <VBox prefHeight="373.0" prefWidth="690.0">
+            <TableView fx:id="playerTable" layoutY="120.0" opacity="0.8" prefHeight="358.0" prefWidth="690.0">
+                <columns>
+                    <TableColumn prefWidth="50.0" text="Column X" />
+                    <TableColumn prefWidth="120.0" text="Column X" />
+                    <TableColumn prefWidth="75.0" text="Column X" />
+                    <TableColumn prefWidth="100.0" text="Column X" />
+                    <TableColumn prefWidth="100.0" text="Column X" />
+                    <TableColumn prefWidth="75.0" text="Column X" />
+                    <TableColumn prefWidth="50.0" text="Column X" />
+                    <TableColumn prefWidth="90.0" text="Column X" />
+                </columns>
+            </TableView>
+            <Pagination fx:id="pagination" currentPageIndex="1" minHeight="59.0" pageCount="10" prefHeight="125.0" prefWidth="690.0" />
+        </VBox>
+    </center>
+    <right>
+        <VBox prefHeight="402.0" prefWidth="412.0">
+            <padding>
+                <Insets bottom="20"/>
+            </padding>
+            <ImageView fx:id="imageView" fitHeight="495.0" fitWidth="410.0" pickOnBounds="true">
+                <VBox.margin>
+                    <Insets top="-150.0"/>
+                </VBox.margin>
+            </ImageView>
+        </VBox>
+    </right>
+</BorderPane>
