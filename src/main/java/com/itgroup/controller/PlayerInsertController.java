@@ -41,7 +41,7 @@ public class PlayerInsertController implements Initializable {
     private Player bean;
 
     @FXML
-    public void onPlayerInsert(ActionEvent event) {
+    public void onPlayerInsert(ActionEvent event) { // 선수등록
         if (validationCheck()) {
             if (insertDatabase() == 1) {
                 closeStage(event);
