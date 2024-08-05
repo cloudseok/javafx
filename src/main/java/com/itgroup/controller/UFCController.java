@@ -57,7 +57,7 @@ public class UFCController implements Initializable {
                     if (newValue.getImage() != null) {
                         imageFile = Utility.IMAGE_PATH + newValue.getImage().trim();
                     } else {
-                        imageFile = Utility.IMAGE_PATH + "noimage.jpg";
+                        imageFile = Utility.IMAGE_PATH + "noImage.jpg";
                     }
 
                     Image someImage = null; // 이미지 객체
@@ -78,7 +78,7 @@ public class UFCController implements Initializable {
         this.hostServices = hostServices;
     }
     @FXML
-    public void onImageClick(javafx.scene.input.MouseEvent event) {
+    public void onImageClick(javafx.scene.input.MouseEvent event) {  // 이미지별 링크
         String url = "";
         ImageView clickedImageView = (ImageView) event.getSource();
 
@@ -198,7 +198,7 @@ public class UFCController implements Initializable {
             stage.showAndWait();
             setPagination(0);
         } else {
-            String[] message = new String[]{"선수 선택 확인", "선수 미선택", "수정하고자 하는 선수을 선택해 주세요."};
+            String[] message = new String[]{"선수 선택 확인", "선수 미선택", "수정 하고자 하는 선수을 선택해 주세요."};
             Utility.showAlert(Alert.AlertType.ERROR, message);
         }
     }
